@@ -1,3 +1,5 @@
+STEP 1. To initialize a github website with your website code:
+
 First, make sure the machine you are working on has the correct github sshkey:
 ssh-keygen
 cd .ssh
@@ -19,6 +21,24 @@ cp -R _site docs
 
 git add -f *
 
+git commit -m "first"
+
+git push
+
+STEP 2: Make the website visible
+Go to Settings for that new project, Pages, then Deploy from Branch, then main/ /docs
+
+
+STEP 3: Modify the website
+git config pull.rebase false
+
+git pull
+
+<modify the files as necessary>; check the website builds correctly in your terminal:
+npm start &
+(the version displayed will be based on the _site files that you build through this command)
+
+copy the _site files to the docs/ folder then git add -f *, git commit, and git push
 
 
 
