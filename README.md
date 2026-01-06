@@ -58,32 +58,30 @@ The `Makefile` contains a handy target for uploading your site to your Computer 
 This website is built with Eleventy (11ty) and Tailwind CSS and is deployed using GitHub Pages.
 The live site is served from the `docs/` folder.
 
----
-
 ## Requirements
 
 Node.js 18 (LTS) is required. Using nvm is recommended.
 
+```
 nvm install v20.17.0
 nvm use v20.17.0
-
----
+```
 
 ## One-time setup (first time on a machine)
 
-git clone https://github.com/lizmarai/cs529web.git  
-cd cs529web  
+```
+git clone https://github.com/lizmarai/cs529web.git
+cd cs529web
 npm install
-
----
+```
 
 ## How to update the website
 
 ### 1. Pull the latest changes
 
+```
 git pull
-
----
+```
 
 ### 2. Edit content
 
@@ -93,64 +91,56 @@ Add images to the `_site/photos/` folder.
 
 When referencing images, use absolute paths like:
 
+```
 <img src="../photos/fall-2025/example.png" />
-
----
+```
 
 ### 3. Preview locally (recommended)
 
-npm start
+`npm start`
 
 Open a browser and go to:
 
-http://localhost:8081
+`http://localhost:8081`
 
 Stop the server with Ctrl+C when finished.
 
----
-
 ### 4. Build the site
 
-npm run build
+`npm run build`
 
 This generates the website into the `_site/` folder.
-
----
 
 ### 5. Publish to GitHub Pages
 
 Copy the generated files and folder from `_site/` into the `docs/` folder:
 
-cp -R \_site/\* docs/
-
----
+`cp -R \_site/\* docs/`
 
 ### 6. Commit and push changes
 
-git add -A  
-git commit -m "Update website"  
+```
+git add -A
+git commit -m "Update website"
 git push
-
----
+```
 
 ## View the live site
 
 After about 30–60 seconds, the website will be available at:
 
-https://lizmarai.github.io/cs529web/
-
----
+`https://lizmarai.github.io/cs529web/`
 
 ## Quick checklist
 
-git pull  
-(edit markdown files and photos)  
-npm run build  
-cp -R \_site/\* docs/  
-git add -A  
-git commit -m "Update"  
+```
+git pull
+(edit markdown files and photos)
+npm run build
+cp -R \_site/\* docs/
+git add -A
+git commit -m "Update"
 git push
-
----
+```
 
 Do NOT edit the `_site/` folder directly except for adding images or videos. It is always regenerated.

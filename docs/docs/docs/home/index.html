@@ -146,12 +146,12 @@
 <html lang="en">
   <head>
     <title>
-      CS529 VDS VDS@UIC Fall 2022
+      Visual Data Science CS529 VDS
     </title>
     <meta charset="UTF-8"/>
     <meta http-equiv="x-ua-compatible" content="ie=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover"/>
-    <link rel="stylesheet" href="../style.css?v={ version }" type="text/css"/>
+    <link rel="stylesheet" href="../style.css?v=1755730725085" type="text/css"/>
   </head>
   <body class="bg-uicblue">
     <div class="bg-uicblue grid place-items-center">
@@ -205,106 +205,60 @@
             <a class="shrink text-sm" href="../gallery/index.html">gallery</a>
           </div>
         <div id="portrait-group" class="relative max-w-4xl mb-4">
-          <div id="portrait" style="background-image: url(../photos/vds.jpg);" class="object-contain h-[50vh] bg-cover">&nbsp;</div>
+          <div id="portrait" style="background-image: url(../photos/vds2.jpg);" class="object-contain h-[50vh] bg-cover">&nbsp;</div>
           <img id="circlemark" class="absolute bottom-0 left-6 w-24" src="../circle.svg"/>
           <div id="name-title" class="relative mr-5 text-right" style="line-height: 12px">
-            <span class="font-bold text-lg">VDS@UIC Fall 2022</span><br/>
-            <span class="text-base font-normal"> CS529 VDS</span>
+            <span class="font-bold text-lg">CS529 VDS</span><br/>
+            <span class="text-base font-normal"> Visual Data Science</span>
             </div>
           </div>
 
         <div id="content" class="text-justify mx-8 text-base">      
-          <p>STEP 1. To initialize a github website with your website code:</p>
-<p>First, make sure the machine you are working on has the correct github sshkey:
-ssh-keygen
-cd .ssh
-ls
-less id_rsa.pub
-then paste into this file the github sshkey for your github account</p>
-<p>Then using the github website make a new repository/project under github and land on the Quick setup with SSH instructions.</p>
-<p>On the local machine make a new directory foobar/ and cd to it.</p>
-<p>git clone git@github.com:lizmarai/cs426web.git (or whatever the pathway listed under Quick setup says under ssh).</p>
-<p>cp -R all files to foobar ( cp -R ../Downloads/cs426_webpage-main/* cs426/)</p>
-<p>cd cs426</p>
-<p>cp -R _site docs</p>
-<p>git add -f *</p>
-<p>git commit -m &quot;first&quot;</p>
-<p>git push</p>
-<p>STEP 2: Make the website visible
-Go to Settings for that new project, Pages, then Deploy from Branch, then main/ /docs</p>
-<p>STEP 3: Modify the website
-git config pull.rebase false</p>
-<p>git pull</p>
-<p><modify the files as necessary>; check the website builds correctly in your terminal:
-npm start &amp;
-(the version displayed will be based on the _site files that you build through this command)</p>
-<p>copy the _site files to the docs/ folder then git add -f *, git commit, and git push</p>
-<p>This is the source code for Prof. Jakob Eriksson's personal webpage, viewable at http://www.cs.uic.edu/~jakob.
-Feel free to fork this repo to make your own UIC-themed webpage.</p>
-<p>To use it, first install node. On a mac, that would be
-<code>brew install node</code>. On linux, <code>apt-get install nodejs npm</code>.</p>
-<p>Then install the static site generator 11ty and the CSS framework tailwind.
-<code>npm install -D @11ty/eleventy tailwindcss@latest</code></p>
-<p>To use this as a template, start by updatin the settings in <code>_data/defaults.json' to reflect your name, title and a suitable portrait. Delete the contents of 'photos/' and add some of your own. Use landscape oriented photos of high resolution, and with your face fairly prominent and centered. Then, simply edit </code>home.md<code>, </code>projects.md<code>and</code>news.md` with your own content, and you're good to go.</p>
-<p>To try it out, run <code>npm start</code> in the main folder, and open your website in a browser using the URL <code>localhost:8080</code>.
-The <code>Makefile</code> contains a handy target for uploading your site to your Computer Science department <code>WWW</code> folder. Works for me, but your YMMV as that's a pretty outdated system.</p>
-<h1>CS529 Website – Updated Instructions (For future reference)</h1>
-<p>This website is built with Eleventy (11ty) and Tailwind CSS and is deployed using GitHub Pages.
-The live site is served from the <code>docs/</code> folder.</p>
-<hr>
-<h2>Requirements</h2>
-<p>Node.js 18 (LTS) is required. Using nvm is recommended.</p>
-<p>nvm install v20.17.0
-nvm use v20.17.0</p>
-<hr>
-<h2>One-time setup (first time on a machine)</h2>
-<p>git clone https://github.com/lizmarai/cs529web.git<br>
-cd cs529web<br>
-npm install</p>
-<hr>
-<h2>How to update the website</h2>
-<h3>1. Pull the latest changes</h3>
-<p>git pull</p>
-<hr>
-<h3>2. Edit content</h3>
-<p>Edit Markdown files such as <code>gallery.md</code>, <code>home.md</code>, or <code>projects.md</code>.</p>
-<p>Add images to the <code>_site/photos/</code> folder.</p>
-<p>When referencing images, use absolute paths like:</p>
-<img src="../photos/fall-2025/example.png" />
-<hr>
-<h3>3. Preview locally (recommended)</h3>
-<p>npm start</p>
-<p>Open a browser and go to:</p>
-<p>http://localhost:8081</p>
-<p>Stop the server with Ctrl+C when finished.</p>
-<hr>
-<h3>4. Build the site</h3>
-<p>npm run build</p>
-<p>This generates the website into the <code>_site/</code> folder.</p>
-<hr>
-<h3>5. Publish to GitHub Pages</h3>
-<p>Copy the generated files and folder from <code>_site/</code> into the <code>docs/</code> folder:</p>
-<p>cp -R _site/* docs/</p>
-<hr>
-<h3>6. Commit and push changes</h3>
-<p>git add -A<br>
-git commit -m &quot;Update website&quot;<br>
-git push</p>
-<hr>
-<h2>View the live site</h2>
-<p>After about 30–60 seconds, the website will be available at:</p>
-<p>https://lizmarai.github.io/cs529web/</p>
-<hr>
-<h2>Quick checklist</h2>
-<p>git pull<br>
-(edit markdown files and photos)<br>
-npm run build<br>
-cp -R _site/* docs/<br>
-git add -A<br>
-git commit -m &quot;Update&quot;<br>
-git push</p>
-<hr>
-<p>Do NOT edit the <code>_site/</code> folder directly except for adding images or videos. It is always regenerated.</p>
+          <p>CS 529 -- Visual Data Science -- is an introductory research-oriented
+graduate-level course offerred at the Electronic Visualization
+Laboratory, Department of Computer Science. The course was first
+offered in Fall 2018, as a Special Topics Course CS594, and received
+excellent reviews (4.7/5). Since then, the course has been offered
+once a year.</p>
+<h1>Course Description</h1>
+<p>This course is an introduction to key design principles and techniques for interactively visualizing and analyzing data in data science. The major goals of this course are to understand how human perception and cognition can help in the analysis and understanding of complex data, how to design and evaluate effective visual representations of data to support analysis, how to tell a compelling data story, and how to create your own interactive visual data analysis using web-based frameworks.</p>
+<h1>Content</h1>
+<p>Learn how to do visual data science research, from soup to nuts, in
+one semester. Or, why not, how to use visualization and web
+programming to analyze your own data! Learn how to engineer
+requirements and build a software system for data analysis that humans appreciate. Learn the core
+principles of web programming, so you can transfer that knowledge to
+new, emerging .js frameworks. Learn the principles of web visual design, so
+you can build better human-computer interfaces.</p>
+<h1>Prerequisites</h1>
+<p>This class is open to CS students and to students from other disciplines (biology, geology, history, physics etc.) who are interested in collaborating with computer scientists.</p>
+<p>Prereqs: CS students: programming experience; non-CS students: project ideas and some programming experience. Computer graphics experience is welcome, but not required.</p>
+<h1>Structure</h1>
+<p>The class consists of readings, quizzes, in class exercises, discussions, lectures, guest-lectures, a few lightweight assignments, and a final project.</p>
+<p>The class schedule, the assigned readings, and the course assignments are (and will continue to be) posted through the class syllabus and through Piazza.</p>
+<h1>Student deliverables</h1>
+<p>The students will be required to complete two
+assignments, quizzes, a project-based midterm and final exam, and to
+actively participate in class and Piazza (an online Q&amp;A forum)
+discussions. Graduate students who are interested in research, and in
+particular EVL doctoral
+students are also expected to read and comment on research papers. For the final project, the students will have to submit a proposal within the first half of the course, a final report at the end of the class, and they will be asked to give a public demonstration of the project.</p>
+<h1>Objectives</h1>
+<p>After successful completion of this course, students will be able to:</p>
+<ul>
+<li>Understand the relationship between visual analysis and data science.</li>
+<li>Use the principles of human perception and cognition in visual data analysis</li>
+<li>Engineer requirements for visual data science problems across application domains.</li>
+<li>Apply a structured design process to create effective data visualizations.</li>
+<li>Conceptualize ideas and interaction techniques using sketching.</li>
+<li>Critically evaluate data visual representations and suggest improvements and refinements.</li>
+<li>Create web-based interactive visualizations using  JavaScript frameworks, D3 and Three.js.</li>
+<li>Have a good working knowledge of Jupyter Notebooks and Pandas.</li>
+<li>Have a good working knowledge of web programming and javascript, and
+be able to easily pick up other .js frames.</li>
+<li>Work effectively as a team; listen effectively; give and receive feedback effectively.</li>
+<li>Communicate orally effectively.</li>
+</ul>
 
           </div>
         </div>

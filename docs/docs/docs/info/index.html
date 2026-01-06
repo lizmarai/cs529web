@@ -146,12 +146,12 @@
 <html lang="en">
   <head>
     <title>
-      CS529 VDS VDS@UIC Fall 2022
+      Class Information and Resources CS529 VDS
     </title>
     <meta charset="UTF-8"/>
     <meta http-equiv="x-ua-compatible" content="ie=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover"/>
-    <link rel="stylesheet" href="../style.css?v={ version }" type="text/css"/>
+    <link rel="stylesheet" href="../style.css?v=1755730725085" type="text/css"/>
   </head>
   <body class="bg-uicblue">
     <div class="bg-uicblue grid place-items-center">
@@ -205,106 +205,186 @@
             <a class="shrink text-sm" href="../gallery/index.html">gallery</a>
           </div>
         <div id="portrait-group" class="relative max-w-4xl mb-4">
-          <div id="portrait" style="background-image: url(../photos/vds.jpg);" class="object-contain h-[50vh] bg-cover">&nbsp;</div>
+          <div id="portrait" style="background-image: url(../photos/vdsastro.jpg);" class="object-contain h-[50vh] bg-cover">&nbsp;</div>
           <img id="circlemark" class="absolute bottom-0 left-6 w-24" src="../circle.svg"/>
           <div id="name-title" class="relative mr-5 text-right" style="line-height: 12px">
-            <span class="font-bold text-lg">VDS@UIC Fall 2022</span><br/>
-            <span class="text-base font-normal"> CS529 VDS</span>
+            <span class="font-bold text-lg">CS529 VDS</span><br/>
+            <span class="text-base font-normal"> Class Information and Resources</span>
             </div>
           </div>
 
         <div id="content" class="text-justify mx-8 text-base">      
-          <p>STEP 1. To initialize a github website with your website code:</p>
-<p>First, make sure the machine you are working on has the correct github sshkey:
-ssh-keygen
-cd .ssh
-ls
-less id_rsa.pub
-then paste into this file the github sshkey for your github account</p>
-<p>Then using the github website make a new repository/project under github and land on the Quick setup with SSH instructions.</p>
-<p>On the local machine make a new directory foobar/ and cd to it.</p>
-<p>git clone git@github.com:lizmarai/cs426web.git (or whatever the pathway listed under Quick setup says under ssh).</p>
-<p>cp -R all files to foobar ( cp -R ../Downloads/cs426_webpage-main/* cs426/)</p>
-<p>cd cs426</p>
-<p>cp -R _site docs</p>
-<p>git add -f *</p>
-<p>git commit -m &quot;first&quot;</p>
-<p>git push</p>
-<p>STEP 2: Make the website visible
-Go to Settings for that new project, Pages, then Deploy from Branch, then main/ /docs</p>
-<p>STEP 3: Modify the website
-git config pull.rebase false</p>
-<p>git pull</p>
-<p><modify the files as necessary>; check the website builds correctly in your terminal:
-npm start &amp;
-(the version displayed will be based on the _site files that you build through this command)</p>
-<p>copy the _site files to the docs/ folder then git add -f *, git commit, and git push</p>
-<p>This is the source code for Prof. Jakob Eriksson's personal webpage, viewable at http://www.cs.uic.edu/~jakob.
-Feel free to fork this repo to make your own UIC-themed webpage.</p>
-<p>To use it, first install node. On a mac, that would be
-<code>brew install node</code>. On linux, <code>apt-get install nodejs npm</code>.</p>
-<p>Then install the static site generator 11ty and the CSS framework tailwind.
-<code>npm install -D @11ty/eleventy tailwindcss@latest</code></p>
-<p>To use this as a template, start by updatin the settings in <code>_data/defaults.json' to reflect your name, title and a suitable portrait. Delete the contents of 'photos/' and add some of your own. Use landscape oriented photos of high resolution, and with your face fairly prominent and centered. Then, simply edit </code>home.md<code>, </code>projects.md<code>and</code>news.md` with your own content, and you're good to go.</p>
-<p>To try it out, run <code>npm start</code> in the main folder, and open your website in a browser using the URL <code>localhost:8080</code>.
-The <code>Makefile</code> contains a handy target for uploading your site to your Computer Science department <code>WWW</code> folder. Works for me, but your YMMV as that's a pretty outdated system.</p>
-<h1>CS529 Website – Updated Instructions (For future reference)</h1>
-<p>This website is built with Eleventy (11ty) and Tailwind CSS and is deployed using GitHub Pages.
-The live site is served from the <code>docs/</code> folder.</p>
-<hr>
-<h2>Requirements</h2>
-<p>Node.js 18 (LTS) is required. Using nvm is recommended.</p>
-<p>nvm install v20.17.0
-nvm use v20.17.0</p>
-<hr>
-<h2>One-time setup (first time on a machine)</h2>
-<p>git clone https://github.com/lizmarai/cs529web.git<br>
-cd cs529web<br>
-npm install</p>
-<hr>
-<h2>How to update the website</h2>
-<h3>1. Pull the latest changes</h3>
-<p>git pull</p>
-<hr>
-<h3>2. Edit content</h3>
-<p>Edit Markdown files such as <code>gallery.md</code>, <code>home.md</code>, or <code>projects.md</code>.</p>
-<p>Add images to the <code>_site/photos/</code> folder.</p>
-<p>When referencing images, use absolute paths like:</p>
-<img src="../photos/fall-2025/example.png" />
-<hr>
-<h3>3. Preview locally (recommended)</h3>
-<p>npm start</p>
-<p>Open a browser and go to:</p>
-<p>http://localhost:8081</p>
-<p>Stop the server with Ctrl+C when finished.</p>
-<hr>
-<h3>4. Build the site</h3>
-<p>npm run build</p>
-<p>This generates the website into the <code>_site/</code> folder.</p>
-<hr>
-<h3>5. Publish to GitHub Pages</h3>
-<p>Copy the generated files and folder from <code>_site/</code> into the <code>docs/</code> folder:</p>
-<p>cp -R _site/* docs/</p>
-<hr>
-<h3>6. Commit and push changes</h3>
-<p>git add -A<br>
-git commit -m &quot;Update website&quot;<br>
-git push</p>
-<hr>
-<h2>View the live site</h2>
-<p>After about 30–60 seconds, the website will be available at:</p>
-<p>https://lizmarai.github.io/cs529web/</p>
-<hr>
-<h2>Quick checklist</h2>
-<p>git pull<br>
-(edit markdown files and photos)<br>
-npm run build<br>
-cp -R _site/* docs/<br>
-git add -A<br>
-git commit -m &quot;Update&quot;<br>
-git push</p>
-<hr>
-<p>Do NOT edit the <code>_site/</code> folder directly except for adding images or videos. It is always regenerated.</p>
+          <h1>1::Prerequisites</h1>
+<p>Students are not required to have any prior experience with
+web-programming frameworks. Although this course uses state of the art
+web-programming, we build towards web-programming
+from the ground (html, css) up to javascript (js), pandas, and visualization .js frameworks like react.</p>
+<ul>
+<li>
+<p>Note that javascript is the basis of web programming, and although
+this course does not teach other specific .js frameworks, with the .js
+knowledge gained in this course, students typically pick up very easily
+other .js frameworks like angular or svelte.</p>
+</li>
+<li>
+<p>For this edition of the course, students will be expected to do some
+graphics programming (D3, Three.js). We will teach you what you need.</p>
+</li>
+<li>
+<p>While the TA (if assigned to the course) is willing to answer a few programming questions, TA hours are a valuable resource that we have to devote to teaching visualization design, not teaching programming. If stuck on a programming issue, it is fine to use Piazza to ask your question; classmates who answer helpfully such questions will get bonus points on their grade.</p>
+</li>
+</ul>
+<h1>2:: Textbooks</h1>
+<p>The required textbook for this class is:</p>
+<ul>
+<li>Munzner, 2014. Visualization Analysis and Design, CRC Press</li>
+</ul>
+<p>We also strongly recommend:</p>
+<ul>
+<li>Scott Murray's hands on introduction to web programming and D3.js, Interactive Data Visualization for the Web.</li>
+</ul>
+<h1>Readings and Class Participation</h1>
+<p>Students are expected to complete each required reading prior to the class meeting it is related to and come prepared to fully participate in class discussions involving the paper/chapter. To help incentivize participation, we require you to:</p>
+<ul>
+<li>post (using Piazza, watch for instructions) two “discussion items” for each lecture grouping which contains readings,</li>
+</ul>
+<p>and</p>
+<ul>
+<li>post (using Piazza) a short written summary (3-8 sentences) of each paper/chapter.</li>
+</ul>
+<p>&quot;Discussion items&quot; can be something you found particularly interesting or noteworthy in one of the readings, a question you would like to discuss in class, a point you disagree with, or a constructive comment on someone else's posting. All postings must be submitted before class to be counted for credit.</p>
+<ul>
+<li>
+<p>Posts will be graded as pass/fail. Accommodations can be made for an extended illness or other excused absence that causes you to miss more than two of these posts, but please contact the instructor as early as possible in that case.</p>
+</li>
+<li>
+<p>Students who repeatedly skip readings (as well as students who are repeatedly late for class) are subject to a Fairness Penalty, in which they may be required to prepare a short 5-minute entertaining skit for each reading they missed, for the next class meeting (i.e., reading missed on Wed, skit due next class; if the student can't make the next class, the skit gets rescheduled). The skit must cover a technical point from the missed reading, and be amusing (the student may sing a ballad, impersonate Oprah, tell a relevant story from their experience etc.). Skits are a lot of fun for the class, but are a lot more work than reading the chapter and posting a couple of discussion points and a summary. :-)</p>
+</li>
+<li>
+<p>The class will include several oral presentations from students. These may take the form of presentations+class discussion leading; very short exercise presentations (1 minute), skits on an entertaining topic related to VDS (5 minutes), or design presentations for final projects and/or assignments (10 minutes or more).</p>
+</li>
+</ul>
+<h1>3:: Staff</h1>
+<p>Professor:</p>
+<ul>
+<li>G.Elisabeta Marai</li>
+<li>Email:   gmarai AT uic.edu</li>
+<li>Office Hours: TTh 12:15pm-1pm CDRLC 5411</li>
+</ul>
+<p>Graduate Teaching Assistant:</p>
+<ul>
+<li>TBA, if any</li>
+<li>Email: AT uic.edu</li>
+<li>Office Hours: TBA.</li>
+</ul>
+<h1>4:: Course Grade</h1>
+<p>The course grade will be decided based on the following factors:</p>
+<ul>
+<li>Class participation (10%)</li>
+<li>Assignments (20%)</li>
+<li>Quizzes, exercises, and (optional) WCP exam (20%)</li>
+<li>Final project, including midterm intermediate assignments (50%)</li>
+</ul>
+<p>Dr. Marai grades based on the overall class performance, and does not curve grades. Hypothetically speaking, if each student in the class does great, the entire class could get an A grade. Generally speaking, a grade within a standard deviation of the class mean is a pass, anything else is not. We will share the grade histogram for the entire class once an assignment is graded, so that you get a sense of how you are doing with respect to the rest of the class.</p>
+<h1>5:: Homework Assignments and Final Project</h1>
+<p>There will be several assignments and in class exercises, plus a final project; most will be design problems, and most will also require programming. Your working solution should be handed in on-line by 11:59 PM on the due date, or the deadline announced; the exact handin procedure will be in the assignment handout. If approached sensibly (i.e., working steadily), you will have sufficient time for each and every one assignment. Good time management will make this course much more enjoyable. The estimated workload is up to 5 hours per week, depending on your programming proficiency.</p>
+<ul>
+<li>The final project is perhaps the most rewarding assignment in cs529. Final projects are two or three-person projects, to be proposed and completed throughout the term. The submitted work must be the student's (or the group's) own work. If working in a group, each member of the team will receive the same grade; the group is responsible for making a fair division of work between its members. It is important that you keep the final project in mind throughout the entire semester. Groups that form and research ideas for topics early will have more time to realize their goals (and an easier time, too) than a group that devises their topic on the night before the project proposal is due.</li>
+</ul>
+<h1>6:: Absences, Late and Extra Credit Policy</h1>
+<p>If an absence is unavoidable, you are responsible for making arrangements to ensure that your assignments are turned in on time. You are also responsible for obtaining the materials passed out and the information announced during the missed class. In case of extraordinary circumstances (hospitalization, family emergency) you should contact the course staff as soon as possible so that we may arrange an extension for an assignment or schedule a make-up exam prior to the due date. Group assignments are due on time. To quote from Leilah Lyons, you can only miss a class in which you are due to present either individually or as part of a group if &quot;you can present your own death certificate.&quot; :-) Note that many class meetings feature in-class exercises; don't skip class, or you may miss being assigned to a group and not have a solution to present the next class.</p>
+<ul>
+<li>
+<p>We realize that sometimes you may have schedule conflicts -- an exam
+on the day your assignment is due, etc. Unfortunately, we can't give
+extensions for academic overload, but in this course we give you
+three (3) free late days which you can use over the course of the
+semester to accommodate schedule crunches. Your late days will be
+optimally assigned by us at the end of the semester. You may not use
+late days for group assignments, because it would throw your team off.</p>
+</li>
+<li>
+<p>Other than that, you do have the option of handing an assignment (as long as it is not a group assignment) in late -- with a penalty. If you are forced to hand an assignment in after the due date, your grade will then be subject to a penalty, depending on the lateness of your handin. A percentage of the score you received will be deducted as follows:
+2 days after original deadline 15%; 4 days after original deadline
+30%; More than 4 days late No Credit.</p>
+</li>
+<li>
+<p>The above are guidelines. Consult your assignment handouts and/or the course web pages for specific deadlines for each assignment; they may be different for each assignment. And please be aware that these deadlines are strict: a handin that's ten minutes late is still late.</p>
+</li>
+<li>
+<p>Remember that you have three (3) free late days which you can use over the course of the semester to accommodate schedule crunches. You do not need to ask for the staff's permission to use your free late days. Simply state how many days you are using in the body of the submission. Your late days will be optimally assigned by us at the end of the semester.</p>
+</li>
+<li>
+<p>Sometimes you may think that you have been graded unfairly. Please take this up with the TA who graded your assignment. If there is still a problem, Dr. Marai is the final word in grading and will be happy to hear what you have to say. Also, once the grades have gone out, you will only be given one week to lodge a protest. In other courses, students have tried to get points back on all of their assignments in the last week of classes, and though we would like to promote fair grading, we would like to dismiss malintentioned hassling. Our first priority is fairness (both to us and to you), so please do complain about grades if you don't agree with them.</p>
+</li>
+<li>
+<p>There is ample room for bells, whistles, and other credit-garnering efforts on the part of ambitious designers and programmers. You are most welcome to get creative (we love that!), as long as it does not make you late. Special Ninja skills like image processing and GPU acceleration come always handy; so if you have a few days to spare at some point, why not go ahead and impress your friends, do something really awesome for your final project.</p>
+</li>
+</ul>
+<h1>7:: Getting Your Questions Answered</h1>
+<p>There are two ways of getting assignment-related questions answered and problems solved. You can talk to the course staff during office hours or send questions to Piazza. Assignment-related questions should be addressed to the TAs; lecture-related questions should be addressed to Dr. Marai. You may not ask the TAs questions when they are not on hours or call the TAs at home. Also, you should not e-mail the TAs with questions specific to your implementation of the assignment -- those kind of questions should be brought to a TA on hours. However, if there are no TA hours which you can attend, let the graduate TA know about this and we will try our best to accommodate you.</p>
+<ul>
+<li>
+<p>If you have a question that won't be of interest to the class at large, you can mail the the course staff about it directly. Please use good judgment when doing this and consider how urgent your problem is so that the course staff won't be swamped. If it's not that urgent, try Piazza first. In general, the course staff will check Piazza daily and will respond as soon as their schedule allows.</p>
+</li>
+<li>
+<p>If you have administrative questions, or if you disagree with the TA's grading, discuss this first with the graduate TA. You can either show up for TA hours or email the graduate TA directly.</p>
+</li>
+<li>
+<p>The staff office hour listing will be available from the course home page and TA hours will be held in general in the TA's office. When TA hours are rescheduled or exceptions are made, these will be announced on the course web page and on Piazza. Do not expect the TAs to bring up your code on screen and help you debug :-). This is left up to their discretion, and is not part of their job description.</p>
+</li>
+<li>
+<p>Aside from the regular office hours, you may request additional appointments with the course staff; however, these appointments must be made at least a day in advance.</p>
+</li>
+</ul>
+<h1>8:: Class Conduct</h1>
+<p>Our class follows the CS Code of Conduct
+(https://www.cs.uic.edu/~grad/CS_Code_of_Conduct.pdf).  If you are not adhering to our course
+norms, a case of behavior misconduct will be submitted to the Dean of Students and to the Director of
+Graduate/Undergraduate Studies in the department of Computer Science. If you are not adhering to our course
+norms, you will not get full credit for your work in this class. For extreme cases of violating the course
+norms, credit for the course will not be given. Last, professional behavior is expected from everyone. Please mute your cell
+phone during class. Phone rings are disruptive to lectures because
+they interrupt everyone's train of thought. It is apparently a UIC
+tradition that cellphone-rings signal pop quizzes :-\ . The course laptop policy is covered during the first class meeting.</p>
+<h1>9:: Recording and Copyrights</h1>
+<ul>
+<li>
+<p>Audio/Video Recording
+To ensure the free and open discussion of ideas, students may not record classrom lectures, discussion and/or activities without the advance written permission of the instructor, and any such recording properly approved in advance can be used solely for the student's own private use.</p>
+</li>
+<li>
+<p>Copyrighted Material
+Please protect the integrity of all course materials and content. By enrolling in this course, you agree to
+honor this request. Be mindful of the hard work and time that instructors and TAs put into creating course
+materials such as exam and quiz questions, worksheets, lecture videos, and reading materials. All material provided through this web site is subject to copyright. This applies to class/recitation notes, slides, assignments, solutions, project descriptions, etc. You are allowed (and expected!) to use all the provided material for personal use. However, you are strictly prohibited from sharing the material with others in general and from posting the material on the Web or other file sharing venues in particular.</p>
+</li>
+</ul>
+<h1>10:: Inclusive Learning Environment</h1>
+<p>UIC values diversity and inclusion. Regardless of age, disability, ethnicity, race, gender, gender identity,
+sexual orientation, socioeconomic status, geographic background, religion, political ideology, language,
+or culture, we expect all members of this class to contribute to a respectful, welcoming, and inclusive
+environment for every other member of our class. If there are aspects of the instruction or design of this
+course that result in barriers to your inclusion, engagement, accurate assessment or achievement, please
+notify the staff as soon as possible.</p>
+<h1>11:: Students With Disabilities</h1>
+<p>If you have a disability for which you are or may be requesting an accommodation, you are encouraged to contact both your instructor and Disability Resources and Services, as early as possible in the term. DRS will verify your disability and determine reasonable accommodations for this course. UIC is committed to full inclusion and participation of people with disabilities in all aspects of university
+life. If you face or anticipate disability-related barriers while at UIC, please connect with the Disability
+Resource Center (DRC) at drc.uic.edu, via email at drc@uic.edu, or call (312) 413-2183 to create a plan
+for reasonable accommodations. In order to receive accommodations, you will need to disclose the
+disability to the DRC, complete an interactive registration process with the DRC, and provide the course staff with a
+Letter of Accommodation (LOA). Upon receipt of a LOA, I will gladly work with you and the DRC to
+implement approved accommodations.</p>
+<h1>12:: Finally...</h1>
+<p>cs529 is an evolving course. As such we are bound to have our own `bugs' hiding in the corners. Please read everything we hand out very carefully. If there is something which you do not understand, or which is not stated very clearly, please let us know so we can fix it right away.</p>
+<ul>
+<li>
+<p>This applies to the material discussed in class as well. Give us constructive criticism on all aspects of the course. The more feedback there is, the better we can make this course for you as the semester progresses, and the better we can make it for the next UIC vis design students!</p>
+</li>
+<li>
+<p>We just went through a lot of heavy talk. Please take all of it seriously, but also remember that we're not trying to scare you: we are here to help you! We're just clearing preliminaries and establishing the ground rules. With that done, we hope you'll have as much fun as we did in our introductory visualization classes.</p>
+</li>
+</ul>
 
           </div>
         </div>
