@@ -115,7 +115,7 @@ This generates the website into the `_site/` folder.
 
 Copy the generated files and folder from `_site/` into the `docs/` folder:
 
-`cp -R \_site/\* docs/`
+`cp -R _site/. docs/`
 
 ### 6. Commit and push changes
 

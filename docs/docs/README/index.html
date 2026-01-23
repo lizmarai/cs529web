@@ -179,59 +179,54 @@ The <code>Makefile</code> contains a handy target for uploading your site to you
 <h1>CS529 Website – Updated Instructions (For future reference)</h1>
 <p>This website is built with Eleventy (11ty) and Tailwind CSS and is deployed using GitHub Pages.
 The live site is served from the <code>docs/</code> folder.</p>
-<hr>
 <h2>Requirements</h2>
 <p>Node.js 18 (LTS) is required. Using nvm is recommended.</p>
-<p>nvm install v20.17.0
-nvm use v20.17.0</p>
-<hr>
+<pre><code>nvm install v20.17.0
+nvm use v20.17.0
+</code></pre>
 <h2>One-time setup (first time on a machine)</h2>
-<p>git clone https://github.com/lizmarai/cs529web.git<br>
-cd cs529web<br>
-npm install</p>
-<hr>
+<pre><code>git clone https://github.com/lizmarai/cs529web.git
+cd cs529web
+npm install
+</code></pre>
 <h2>How to update the website</h2>
 <h3>1. Pull the latest changes</h3>
-<p>git pull</p>
-<hr>
+<pre><code>git pull
+</code></pre>
 <h3>2. Edit content</h3>
 <p>Edit Markdown files such as <code>gallery.md</code>, <code>home.md</code>, or <code>projects.md</code>.</p>
 <p>Add images to the <code>_site/photos/</code> folder.</p>
 <p>When referencing images, use absolute paths like:</p>
-<img src="../photos/fall-2025/example.png" />
-<hr>
+<pre><code>&lt;img src=&quot;../photos/fall-2025/example.png&quot; /&gt;
+</code></pre>
 <h3>3. Preview locally (recommended)</h3>
-<p>npm start</p>
+<p><code>npm start</code></p>
 <p>Open a browser and go to:</p>
-<p>http://localhost:8081</p>
+<p><code>http://localhost:8081</code></p>
 <p>Stop the server with Ctrl+C when finished.</p>
-<hr>
 <h3>4. Build the site</h3>
-<p>npm run build</p>
+<p><code>npm run build</code></p>
 <p>This generates the website into the <code>_site/</code> folder.</p>
-<hr>
 <h3>5. Publish to GitHub Pages</h3>
 <p>Copy the generated files and folder from <code>_site/</code> into the <code>docs/</code> folder:</p>
-<p>cp -R _site/* docs/</p>
-<hr>
+<p><code>cp -R \_site/\* docs/</code></p>
 <h3>6. Commit and push changes</h3>
-<p>git add -A<br>
-git commit -m &quot;Update website&quot;<br>
-git push</p>
-<hr>
+<pre><code>git add -A
+git commit -m &quot;Update website&quot;
+git push
+</code></pre>
 <h2>View the live site</h2>
 <p>After about 30–60 seconds, the website will be available at:</p>
-<p>https://lizmarai.github.io/cs529web/</p>
-<hr>
+<p><code>https://lizmarai.github.io/cs529web/</code></p>
 <h2>Quick checklist</h2>
-<p>git pull<br>
-(edit markdown files and photos)<br>
-npm run build<br>
-cp -R _site/* docs/<br>
-git add -A<br>
-git commit -m &quot;Update&quot;<br>
-git push</p>
-<hr>
+<pre><code>git pull
+(edit markdown files and photos)
+npm run build
+cp -R \_site/\* docs/
+git add -A
+git commit -m &quot;Update&quot;
+git push
+</code></pre>
 <p>Do NOT edit the <code>_site/</code> folder directly except for adding images or videos. It is always regenerated.</p>
 
           </div>
